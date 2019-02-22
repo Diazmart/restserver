@@ -18,9 +18,9 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'dev'; //si process.env.NODE_ENV 
 
 let urlDB;
 
-if (process.env.NODE_ENV === 'dev'){
-	urlDB = 'mongodb://localhost:27017/comitdb';
-} else {
+//if (process.env.NODE_ENV === 'dev'){
+//	urlDB = 'mongodb://localhost:27017/comitdb';
+//} else {
 	//base en mongoDB atlas con djdim
 	//urlDB = 'mongodb://restUser:M4st3rk3y.%25@ds021010.mlab.com:21010/heroku_d46wp3bg';
 	//El M4st3rk3y.%25 es el password, pero el punto (.) es aceptado mientras que el porcentaje (%) no es aceptado.
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'dev'){
 	urlDB = 'mongodb://donbicho:M4st3rk3y@cluster0-shard-00-00-9mtiz.mongodb.net:27017,cluster0-shard-00-01-9mtiz.mongodb.net:27017,cluster0-shard-00-02-9mtiz.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true';
 	//Esta de abajo es con la cuenta de diazmart
 	//urlDB = 'mongodb://restUserComit:M4st3rk3y@cluster0-shard-00-00-rv1wz.mongodb.net:27017,cluster0-shard-00-01-rv1wz.mongodb.net:27017,cluster0-shard-00-02-rv1wz.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true';
-}
+//}
 
 process.env.URLDB = urlDB; //La que pongo en el server.js linea 17
 
